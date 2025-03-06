@@ -4,7 +4,7 @@ import time
 
 # Hugging Face API details
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
-headers = {"Authorization": "Bearer YOUR_HUGGING_FACE_API_TOKEN"}
+headers = {"Authorization": "Bearer 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"}
 
 # Function to generate text
 def generate_text(prompt):
