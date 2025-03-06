@@ -7,4 +7,4 @@ This tool helps you generate captions, hashtags, and post ideas for social media
 3. Get your captions and hashtags instantly!
 
 ## Live Demo
-[Click here to try the live demo](flexonova.Streamlit.app)
+[Click here to try the live demo](mentalX.Streamlit.app)
