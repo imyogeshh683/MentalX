@@ -56,7 +56,7 @@ if st.button("Generate Content"):
 # Payment link
 st.markdown("---")
 st.markdown("### 💰 Upgrade to Premium")
-st.markdown("Get unlimited access for just $5/month!")
+st.markdown("Get unlimited access for just Rs 129/month!")
 st.markdown("[Buy Now](your-payment-link)")
 platform = st.selectbox("Select Platform", ["Instagram", "Twitter", "LinkedIn"])
 prompt = f"Generate 5 {platform} captions and hashtags for: {prompt}"
