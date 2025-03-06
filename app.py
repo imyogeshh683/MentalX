@@ -4,7 +4,7 @@ import time
 
 # Hugging Face API details
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": "Bearer YOUR_HUGGING_FACE_API_TOKEN"}
 
 # Function to generate text
 def generate_text(prompt):
@@ -46,7 +46,20 @@ prompt = st.text_input("What's your post about? (e.g., 'A new coffee shop openin
 if st.button("Generate Content"):
     if prompt:
         with st.spinner("Generating content..."):  # Loading spinner
-            output = generate_text(f"Generate 5 social media captions and hashtags for: {prompt}")
+            # Improved prompt
+            improved_prompt = f"""
+            Generate 5 creative Instagram captions and hashtags for: {prompt}.
+            Follow this format:
+            1. Caption: [text] Hashtags: [hashtags]
+            2. Caption: [text] Hashtags: [hashtags]
+            3. Caption: [text] Hashtags: [hashtags]
+            4. Caption: [text] Hashtags: [hashtags]
+            5. Caption: [text] Hashtags: [hashtags]
+
+            Example:
+            1. Caption: "Sip, savor, and enjoy the aroma of our freshly brewed coffee! ☕✨" Hashtags: #CoffeeLovers #NewInTown #CoffeeTime
+            """
+            output = generate_text(improved_prompt)
             time.sleep(2)  # Simulate delay for better UX
         st.success("Done! Here's your content:")
         st.write(output)
